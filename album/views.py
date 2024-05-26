@@ -29,3 +29,16 @@ class PlayerCreate(CreateView):
 class PlayerDelete(DeleteView):
     model = Player
     success_url = reverse_lazy('player-list')
+    
+class TeamUpdate(UpdateView):
+    model = Team
+    fields = '__all__' 
+
+class TeamCreate(CreateView):
+    model = Team
+    fields = '__all__'
+    
+
+class TeamDelete(DeleteView):
+    model = Team
+    success_url = reverse_lazy('team-list')
